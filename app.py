@@ -15,7 +15,7 @@ server = app.server
 
 # Set up the app layout
 app.layout = html.Div(children=[
-    html.H1(children="Karan's Movies Analisys Dashboard")
+    html.H1(children="Karan's Movies Analisys Dashboard"),
     html.H2(children='Imdb vs Rotten tomatoes Ratings Dashboard'),
     html.H3(children='Year Released'),
     dcc.RangeSlider(
