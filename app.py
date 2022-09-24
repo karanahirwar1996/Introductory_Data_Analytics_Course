@@ -15,8 +15,9 @@ server = app.server
 
 # Set up the app layout
 app.layout = html.Div(children=[
-    html.H1(children='Imdb vs Rotten tomatoes Ratings Dashboard'),
-    html.H2(children='Year Released'),
+    html.H1(children="Karan's Movies Analisys Dashboard")
+    html.H2(children='Imdb vs Rotten tomatoes Ratings Dashboard'),
+    html.H3(children='Year Released'),
     dcc.RangeSlider(
             id='year-released-range-slider',
             min=dashboard_data.year.min(),
@@ -25,7 +26,7 @@ app.layout = html.Div(children=[
             value=[dashboard_data.year.min(), dashboard_data.year.max()]
         ),
     html.Br(),
-    html.H2(children='Box Office Earnings (in millions)'),
+    html.H3(children='Box Office Earnings (in millions)'),
     dcc.RangeSlider(
             id='box-office-range-slider',
             min=dashboard_data.worldwide_gross_income.min(),
@@ -35,7 +36,7 @@ app.layout = html.Div(children=[
             value=[dashboard_data.worldwide_gross_income.min(), dashboard_data.worldwide_gross_income.max()]
         ),
     html.Br(),
-    html.H2(children='Genre'),
+    html.H3(children='Genre'),
     dcc.Dropdown(
         id = 'genre-dropdown',
         options=[{'label':i,'value':i} for i in genre],
